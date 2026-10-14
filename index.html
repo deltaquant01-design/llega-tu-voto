@@ -133,13 +133,14 @@ footer .sig { color: var(--gold); letter-spacing: 0.04em; }
   <section class="controls" aria-label="Ajustes">
     <fieldset class="field"><legend>Encuesta</legend>
       <div class="seg">
-        <label><input type="radio" name="poll" id="poll-cis" value="cis" checked><span>CIS septiembre</span></label>
+        <label><input type="radio" name="poll" id="poll-cis" value="cis" checked><span>CIS octubre</span></label>
         <label><input type="radio" name="poll" id="poll-otras" value="otras"><span>Otras (aprox.)</span></label>
       </div></fieldset>
-    <fieldset class="field"><legend>Partido a la izquierda del PSOE</legend>
+    <fieldset class="field"><legend>A la izquierda del PSOE</legend>
       <div class="seg">
         <label><input type="radio" name="party" id="party-sumar" value="SUMAR" checked><span>Sumar</span></label>
         <label><input type="radio" name="party" id="party-podemos" value="PODEMOS"><span>Podemos</span></label>
+        <label><input type="radio" name="party" id="party-coal" value="COAL"><span>Juntos</span></label>
       </div></fieldset>
   </section>
 
@@ -163,9 +164,10 @@ footer .sig { color: var(--gold); letter-spacing: 0.04em; }
   <section class="method">
     <h2>Cómo se calcula</h2>
     <p><b>Base.</b> Resultados oficiales del 23-J de 2023 por circunscripción (Ministerio del Interior). Con ellos, el reparto D'Hondt con barrera del 3 % provincial reproduce los 350 escaños reales.</p>
-    <p><b>Encuesta.</b> El CIS (septiembre, n = 4.042) da porcentajes nacionales. Se trasladan a cada provincia con el cambio proporcional de cada partido respecto a 2023, ajustando para que cada provincia sume 100 % y el total nacional coincida con la encuesta. Los partidos territoriales solo puntúan donde ya tenían voto.</p>
+    <p><b>Encuesta.</b> El CIS (octubre, estudio 3582, n = 5.025) da porcentajes nacionales. Se trasladan a cada provincia con el cambio proporcional de cada partido respecto a 2023, ajustando para que cada provincia sume 100 % y el total nacional coincida con la encuesta. Los partidos territoriales solo puntúan donde ya tenían voto.</p>
     <p><b>Probabilidad.</b> 4.000 simulaciones con error común de encuesta y ruido propio de cada provincia. La cifra es el porcentaje de simulaciones en que el partido saca al menos un escaño.</p>
-    <p><b>Fuentes.</b> <a href="https://infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior, Congreso julio 2023</a> · <a href="https://www.cis.es/documents/d/guest/es3577mar_A-pdf" target="_blank" rel="noopener">CIS, barómetro de septiembre 2026</a> · Sigma Dos y 40dB, citadas por prensa.</p>
+    <p><b>Fuentes.</b> <a href="https://infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior, Congreso julio 2023</a> · <a href="https://www.cis.es/es/w/avance-de-resultados-del-estudio-3582-bar%C3%B3metro-de-octubre-2026-" target="_blank" rel="noopener">CIS, barómetro de octubre 2026</a> · Sigma Dos y 40dB, citadas por prensa.</p>
+    <p><b>Juntos.</b> La opción «Juntos» simula una lista única de Sumar y Podemos (la confluencia que plantea Rufián, que el CIS recoge con un 0,8 % de voto directo espontáneo). Se suman sus dos cuotas sin pérdida de votantes: es el techo de lo que ganaría la unión, no una previsión de que ocurra. Se compara con la misma simulación por separado.</p>
     <p><b>Límites.</b> No hay encuestas provinciales oficiales. La encuesta fija el total nacional de Sumar y de Podemos; dentro de cada provincia se supone que ambos reparten el voto de Sumar 2023 en proporción. Las listas locales con más del 2 % en 2023 (Soria ¡Ya!, Teruel Existe, UPL, Por Ávila, Nueva Canarias, CUP y otras) compiten con su peso de entonces, y el resto de «Otros» crece de forma pareja en todas las provincias. Vox no se presentó en Santa Cruz de Tenerife en 2023; se le asigna la cuota media de Canarias. El CIS y el resto de sondeos difieren varios puntos; la opción «Otras» es la media aproximada de Sigma Dos y 40dB. Es una estimación para pensar, no una profecía.</p>
   </section>
 
@@ -177,7 +179,7 @@ footer .sig { color: var(--gold); letter-spacing: 0.04em; }
 <script id="engine">// GENERADO por scripts/make-data.mjs — no editar a mano
 const PARTIES = ["PP","PSOE","VOX","SUMAR","PODEMOS","ERC","JUNTS","BILDU","PNV","BNG","CCA","UPN","SALF","OTROS"];
 const PROVINCES = [{"code":4,"name":"Almería","ccaa":"Andalucía","seats":6,"valid":321242,"votes":{"PP":131524,"PSOE":93282,"VOX":68364,"SUMAR":21485},"locals":{},"other":6587,"realSeats":{"PP":3,"PSOE":2,"VOX":1}},{"code":11,"name":"Cádiz","ccaa":"Andalucía","seats":9,"valid":637098,"votes":{"PP":221703,"PSOE":211200,"VOX":96720,"SUMAR":82115},"locals":{},"other":25360,"realSeats":{"PP":4,"PSOE":3,"VOX":1,"SUMAR":1}},{"code":14,"name":"Córdoba","ccaa":"Andalucía","seats":6,"valid":448602,"votes":{"PP":169976,"PSOE":144080,"VOX":62526,"SUMAR":61594},"locals":{},"other":10426,"realSeats":{"PP":2,"PSOE":2,"VOX":1,"SUMAR":1}},{"code":18,"name":"Granada","ccaa":"Andalucía","seats":7,"valid":502845,"votes":{"PP":185996,"PSOE":165862,"VOX":81080,"SUMAR":58567},"locals":{},"other":11340,"realSeats":{"PP":3,"PSOE":2,"VOX":1,"SUMAR":1}},{"code":21,"name":"Huelva","ccaa":"Andalucía","seats":5,"valid":256804,"votes":{"PP":93565,"PSOE":92326,"VOX":37572,"SUMAR":26752},"locals":{},"other":6589,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":23,"name":"Jaén","ccaa":"Andalucía","seats":5,"valid":368731,"votes":{"PP":137617,"PSOE":133819,"VOX":54400,"SUMAR":29461},"locals":{"Jaén Merece Más":8293},"other":5141,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":29,"name":"Málaga","ccaa":"Andalucía","seats":11,"valid":788338,"votes":{"PP":302000,"PSOE":239172,"VOX":129758,"SUMAR":96652},"locals":{},"other":20756,"realSeats":{"PP":5,"PSOE":3,"VOX":2,"SUMAR":1}},{"code":41,"name":"Sevilla","ccaa":"Andalucía","seats":12,"valid":1059358,"votes":{"PP":353663,"PSOE":387760,"VOX":141087,"SUMAR":148745},"locals":{},"other":28103,"realSeats":{"PP":4,"PSOE":5,"VOX":1,"SUMAR":2}},{"code":22,"name":"Huesca","ccaa":"Aragón","seats":3,"valid":119895,"votes":{"PP":45783,"PSOE":40307,"VOX":15155,"SUMAR":13774},"locals":{},"other":4876,"realSeats":{"PP":2,"PSOE":1}},{"code":44,"name":"Teruel","ccaa":"Aragón","seats":3,"valid":75913,"votes":{"PP":26586,"PSOE":22226,"VOX":9932,"SUMAR":4126},"locals":{"Aragón Existe":11348},"other":1695,"realSeats":{"PP":2,"PSOE":1}},{"code":50,"name":"Zaragoza","ccaa":"Aragón","seats":7,"valid":518705,"votes":{"PP":186776,"PSOE":159858,"VOX":79376,"SUMAR":69925},"locals":{},"other":22770,"realSeats":{"PP":3,"PSOE":2,"VOX":1,"SUMAR":1}},{"code":33,"name":"Asturias","ccaa":"Principado de Asturias","seats":7,"valid":597032,"votes":{"PP":212816,"PSOE":205049,"VOX":74571,"SUMAR":88630},"locals":{},"other":15966,"realSeats":{"PP":3,"PSOE":2,"VOX":1,"SUMAR":1}},{"code":7,"name":"Illes Balears","ccaa":"Illes Balears","seats":8,"valid":503280,"votes":{"PP":179303,"PSOE":151786,"VOX":76547,"SUMAR":83487},"locals":{},"other":12157,"realSeats":{"PP":3,"PSOE":3,"VOX":1,"SUMAR":1}},{"code":35,"name":"Las Palmas","ccaa":"Canarias","seats":8,"valid":529337,"votes":{"PP":136857,"PSOE":175671,"VOX":77343,"SUMAR":54369,"CCA":33558},"locals":{"Nueva Canarias":42430},"other":9109,"realSeats":{"PP":3,"PSOE":3,"VOX":1,"SUMAR":1}},{"code":38,"name":"Santa Cruz de Tenerife","ccaa":"Canarias","seats":7,"valid":494373,"votes":{"PP":174770,"PSOE":165590,"SUMAR":53632,"CCA":82805},"locals":{},"other":17576,"realSeats":{"PP":3,"PSOE":3,"CCA":1}},{"code":39,"name":"Cantabria","ccaa":"Cantabria","seats":5,"valid":350150,"votes":{"PP":147326,"PSOE":116596,"VOX":49243,"SUMAR":29713},"locals":{},"other":7272,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":2,"name":"Albacete","ccaa":"Castilla - La Mancha","seats":4,"valid":221191,"votes":{"PP":88299,"PSOE":76322,"VOX":36750,"SUMAR":15834},"locals":{},"other":3986,"realSeats":{"PP":2,"PSOE":2}},{"code":13,"name":"Ciudad Real","ccaa":"Castilla - La Mancha","seats":5,"valid":282979,"votes":{"PP":114709,"PSOE":100102,"VOX":46046,"SUMAR":17405},"locals":{},"other":4717,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":16,"name":"Cuenca","ccaa":"Castilla - La Mancha","seats":3,"valid":113808,"votes":{"PP":45255,"PSOE":42528,"VOX":17700,"SUMAR":6325},"locals":{},"other":2000,"realSeats":{"PP":2,"PSOE":1}},{"code":19,"name":"Guadalajara","ccaa":"Castilla - La Mancha","seats":3,"valid":140913,"votes":{"PP":51195,"PSOE":46479,"VOX":27126,"SUMAR":12907},"locals":{},"other":3206,"realSeats":{"PP":1,"PSOE":1,"VOX":1}},{"code":45,"name":"Toledo","ccaa":"Castilla - La Mancha","seats":6,"valid":387200,"votes":{"PP":146533,"PSOE":126072,"VOX":76044,"SUMAR":31876},"locals":{},"other":6675,"realSeats":{"PP":3,"PSOE":2,"VOX":1}},{"code":5,"name":"Ávila","ccaa":"Castilla y León","seats":3,"valid":97956,"votes":{"PP":42369,"PSOE":26828,"VOX":15068,"SUMAR":5027},"locals":{"Por Ávila":7362},"other":1302,"realSeats":{"PP":2,"PSOE":1}},{"code":9,"name":"Burgos","ccaa":"Castilla y León","seats":4,"valid":202569,"votes":{"PP":82329,"PSOE":69775,"VOX":25858,"SUMAR":17508},"locals":{},"other":7099,"realSeats":{"PP":2,"PSOE":2}},{"code":24,"name":"León","ccaa":"Castilla y León","seats":4,"valid":275240,"votes":{"PP":101605,"PSOE":92578,"VOX":35451,"SUMAR":18577},"locals":{"UPL":22675},"other":4354,"realSeats":{"PP":2,"PSOE":2}},{"code":34,"name":"Palencia","ccaa":"Castilla y León","seats":3,"valid":96962,"votes":{"PP":40709,"PSOE":33613,"VOX":12504,"SUMAR":5877},"locals":{},"other":4259,"realSeats":{"PP":2,"PSOE":1}},{"code":37,"name":"Salamanca","ccaa":"Castilla y León","seats":4,"valid":199110,"votes":{"PP":93318,"PSOE":60718,"VOX":29203,"SUMAR":11012},"locals":{},"other":4859,"realSeats":{"PP":3,"PSOE":1}},{"code":40,"name":"Segovia","ccaa":"Castilla y León","seats":3,"valid":88613,"votes":{"PP":39894,"PSOE":27113,"VOX":12510,"SUMAR":7137},"locals":{},"other":1959,"realSeats":{"PP":2,"PSOE":1}},{"code":42,"name":"Soria","ccaa":"Castilla y León","seats":2,"valid":50769,"votes":{"PP":18895,"PSOE":14966,"VOX":4978,"SUMAR":1711},"locals":{"Soria ¡Ya!":9697},"other":522,"realSeats":{"PP":1,"PSOE":1}},{"code":47,"name":"Valladolid","ccaa":"Castilla y León","seats":5,"valid":316309,"votes":{"PP":129170,"PSOE":103596,"VOX":47948,"SUMAR":28049},"locals":{},"other":7546,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":49,"name":"Zamora","ccaa":"Castilla y León","seats":3,"valid":103410,"votes":{"PP":46196,"PSOE":33601,"VOX":13652,"SUMAR":5839},"locals":{},"other":4122,"realSeats":{"PP":2,"PSOE":1}},{"code":8,"name":"Barcelona","ccaa":"Cataluña","seats":32,"valid":2667478,"votes":{"PP":367519,"PSOE":952347,"VOX":201775,"SUMAR":405993,"ERC":328697,"JUNTS":258159},"locals":{"CUP":67266},"other":85722,"realSeats":{"PP":5,"PSOE":13,"VOX":2,"SUMAR":5,"ERC":4,"JUNTS":3}},{"code":17,"name":"Girona","ccaa":"Cataluña","seats":6,"valid":322988,"votes":{"PP":31341,"PSOE":93448,"VOX":22706,"SUMAR":35344,"ERC":47531,"JUNTS":63251},"locals":{"CUP":18229},"other":11138,"realSeats":{"PSOE":2,"SUMAR":1,"ERC":1,"JUNTS":2}},{"code":25,"name":"Lleida","ccaa":"Cataluña","seats":4,"valid":184539,"votes":{"PP":23699,"PSOE":54414,"VOX":12560,"SUMAR":14561,"ERC":34331,"JUNTS":33228},"locals":{"CUP":5449},"other":6297,"realSeats":{"PSOE":2,"ERC":1,"JUNTS":1}},{"code":43,"name":"Tarragona","ccaa":"Cataluña","seats":6,"valid":368024,"votes":{"PP":51061,"PSOE":121126,"VOX":38039,"SUMAR":41719,"ERC":55461,"JUNTS":40791},"locals":{"CUP":8700},"other":11127,"realSeats":{"PP":1,"PSOE":2,"SUMAR":1,"ERC":1,"JUNTS":1}},{"code":6,"name":"Badajoz","ccaa":"Extremadura","seats":5,"valid":391461,"votes":{"PP":148068,"PSOE":153473,"VOX":53492,"SUMAR":26778},"locals":{},"other":9650,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":10,"name":"Cáceres","ccaa":"Extremadura","seats":4,"valid":235851,"votes":{"PP":89633,"PSOE":91692,"VOX":32076,"SUMAR":16354},"locals":{},"other":6096,"realSeats":{"PP":2,"PSOE":2}},{"code":15,"name":"A Coruña","ccaa":"Galicia","seats":8,"valid":677702,"votes":{"PP":292272,"PSOE":190897,"VOX":34410,"SUMAR":82618,"BNG":67653},"locals":{},"other":9852,"realSeats":{"PP":4,"PSOE":2,"SUMAR":1,"BNG":1}},{"code":27,"name":"Lugo","ccaa":"Galicia","seats":4,"valid":198566,"votes":{"PP":99769,"PSOE":60163,"VOX":8643,"SUMAR":10287,"BNG":17197},"locals":{},"other":2507,"realSeats":{"PP":3,"PSOE":1}},{"code":32,"name":"Ourense","ccaa":"Galicia","seats":4,"valid":186271,"votes":{"PP":93182,"PSOE":56035,"VOX":9080,"SUMAR":10171,"BNG":15317},"locals":{},"other":2486,"realSeats":{"PP":3,"PSOE":1}},{"code":36,"name":"Pontevedra","ccaa":"Galicia","seats":7,"valid":573124,"votes":{"PP":227658,"PSOE":179737,"VOX":27539,"SUMAR":75615,"BNG":53828},"locals":{},"other":8747,"realSeats":{"PP":3,"PSOE":3,"SUMAR":1}},{"code":28,"name":"Madrid","ccaa":"Comunidad de Madrid","seats":37,"valid":3608673,"votes":{"PP":1463183,"PSOE":1004599,"VOX":506164,"SUMAR":557780},"locals":{},"other":76947,"realSeats":{"PP":16,"PSOE":10,"VOX":5,"SUMAR":6}},{"code":31,"name":"Navarra","ccaa":"Comunidad Foral de Navarra","seats":5,"valid":341844,"votes":{"PP":57134,"PSOE":93553,"VOX":19491,"SUMAR":43922,"BILDU":58954,"UPN":52188},"locals":{"Geroa Bai":9938},"other":6664,"realSeats":{"PP":1,"PSOE":2,"BILDU":1,"UPN":1}},{"code":1,"name":"Araba/Álava","ccaa":"País Vasco","seats":4,"valid":169107,"votes":{"PP":30212,"PSOE":46775,"VOX":6573,"SUMAR":21561,"BILDU":32987,"PNV":28075},"locals":{},"other":2924,"realSeats":{"PP":1,"PSOE":1,"BILDU":1,"PNV":1}},{"code":20,"name":"Gipuzkoa","ccaa":"País Vasco","seats":6,"valid":376621,"votes":{"PP":32721,"PSOE":87709,"VOX":7877,"SUMAR":40081,"BILDU":117321,"PNV":85026},"locals":{},"other":5886,"realSeats":{"PSOE":2,"BILDU":2,"PNV":2}},{"code":48,"name":"Bizkaia","ccaa":"País Vasco","seats":8,"valid":609693,"votes":{"PP":70533,"PSOE":157448,"VOX":16069,"SUMAR":66592,"BILDU":125867,"PNV":164188},"locals":{},"other":8996,"realSeats":{"PP":1,"PSOE":2,"SUMAR":1,"BILDU":2,"PNV":2}},{"code":30,"name":"Murcia","ccaa":"Región de Murcia","seats":10,"valid":747797,"votes":{"PP":307972,"PSOE":189210,"VOX":163124,"SUMAR":71578},"locals":{},"other":15913,"realSeats":{"PP":4,"PSOE":3,"VOX":2,"SUMAR":1}},{"code":26,"name":"La Rioja","ccaa":"La Rioja","seats":4,"valid":174663,"votes":{"PP":79715,"PSOE":62322,"VOX":17056,"SUMAR":11470},"locals":{},"other":4100,"realSeats":{"PP":2,"PSOE":2}},{"code":3,"name":"Alacant/Alicante","ccaa":"Comunitat Valenciana","seats":12,"valid":899192,"votes":{"PP":330293,"PSOE":287737,"VOX":146133,"SUMAR":115787},"locals":{},"other":19242,"realSeats":{"PP":5,"PSOE":4,"VOX":2,"SUMAR":1}},{"code":12,"name":"Castelló/Castellón","ccaa":"Comunitat Valenciana","seats":5,"valid":307930,"votes":{"PP":108302,"PSOE":100530,"VOX":48913,"SUMAR":44187},"locals":{},"other":5998,"realSeats":{"PP":2,"PSOE":2,"VOX":1}},{"code":46,"name":"València/Valencia","ccaa":"Comunitat Valenciana","seats":16,"valid":1437161,"votes":{"PP":483469,"PSOE":461353,"VOX":218657,"SUMAR":242839},"locals":{},"other":30843,"realSeats":{"PP":6,"PSOE":5,"VOX":2,"SUMAR":3}},{"code":51,"name":"Ceuta","ccaa":"Ciudad de Ceuta","seats":1,"valid":33321,"votes":{"PP":12918,"PSOE":11332,"VOX":7752,"SUMAR":821},"locals":{},"other":498,"realSeats":{"PP":1}},{"code":52,"name":"Melilla","ccaa":"Ciudad de Melilla","seats":1,"valid":27349,"votes":{"PP":13446,"PSOE":6943,"VOX":4359,"SUMAR":827},"locals":{"CpM":1298},"other":476,"realSeats":{"PP":1}}];
-const POLLS = {"cis":{"label":"CIS septiembre 2026 (campo 1-4 sep., n=4.042)","approx":false,"shares":{"PSOE":31,"PP":25.5,"VOX":16.6,"SUMAR":5.7,"PODEMOS":3.7,"ERC":2.5,"SALF":1.8,"BILDU":1.3,"BNG":0.7,"JUNTS":0.7,"PNV":0.7,"CCA":0.2,"UPN":0.1,"OTROS":8.6}},"otras":{"label":"Media Sigma Dos + 40dB (aprox.; regionales y SALF del CIS)","approx":true,"shares":{"PSOE":26.5,"PP":31.88,"VOX":18.35,"SUMAR":6.1,"PODEMOS":2.7,"ERC":2.5,"SALF":1.8,"BILDU":1.3,"BNG":0.7,"JUNTS":0.7,"PNV":0.7,"CCA":0.2,"UPN":0.1,"OTROS":6.47}}};
+const POLLS = {"cis":{"label":"CIS octubre 2026 (campo 1-6 oct., n=5.025)","approx":false,"shares":{"PSOE":34,"PP":22.2,"VOX":17.1,"SUMAR":6.1,"PODEMOS":3.1,"ERC":3,"SALF":1.8,"BILDU":1.6,"BNG":0.9,"JUNTS":1.1,"PNV":0.6,"CCA":0.2,"UPN":0.1,"OTROS":7.9}},"otras":{"label":"Media Sigma Dos + 40dB (aprox.; regionales y SALF del CIS)","approx":true,"shares":{"PSOE":26.5,"PP":31.88,"VOX":18.35,"SUMAR":6.1,"PODEMOS":2.7,"ERC":3,"SALF":1.8,"BILDU":1.6,"BNG":0.9,"JUNTS":1.1,"PNV":0.6,"CCA":0.2,"UPN":0.1,"OTROS":5.17}}};
 
 /** Reparto D'Hondt con barrera sobre votos válidos de la circunscripción. */
 function dhondt(votes, seats, valid, thr = 0.03) {
@@ -364,11 +366,11 @@ function simulate({ pollKey = 'cis', poll, podemosShare = 0.39, runs = 4000, see
   const acc = {};
   for (const p of PROVINCES) {
     acc[p.code] = {};
-    const keys = PARTIES.concat(Object.keys(p.locals).map(k => 'L:' + k));
+    const keys = PARTIES.concat(Object.keys(p.locals).map(k => 'L:' + k), 'COAL');
     for (const k of keys) acc[p.code][k] = { sum: 0, any: 0, dist: new Array(p.seats + 1).fill(0), extra: 0 };
   }
   const natLeft = [], natRight = [], natSeats = Object.fromEntries(PARTIES.map(k => [k, 0]));
-  let leftWins = 0, rightWins = 0;
+  let leftWins = 0, rightWins = 0, leftCoalWins = 0, coalSeats = 0;
   const runTotals = [];
 
   for (let r = 0; r < runs; r++) {
@@ -380,14 +382,20 @@ function simulate({ pollKey = 'cis', poll, podemosShare = 0.39, runs = 4000, see
     }
     const proj = projectShares(base, pollShares, { factorNoise, provNoise, start: solved._cur });
     const tot = Object.fromEntries(PARTIES.map(k => [k, 0]));
-    let total = 0;
+    let total = 0, coalRun = 0;
     for (const p of PROVINCES) {
       const sh = proj[p.code];
       const seats = dhondt(seatVotes(sh, p.valid), p.seats, p.valid);
+      // Escenario "juntos": Sumar y Podemos en una sola lista con la suma de sus cuotas (sin fugas)
+      const cv = seatVotes(sh, p.valid); const joint = (cv.SUMAR || 0) + (cv.PODEMOS || 0); delete cv.SUMAR; delete cv.PODEMOS;
+      if (joint > 0) cv.COAL = joint;
+      const cs = dhondt(cv, p.seats, p.valid);
+      coalRun += cs.COAL || 0;
       for (const k in acc[p.code]) {
-        const n = seats[k] || 0;
+        const n = k === 'COAL' ? (cs.COAL || 0) : (seats[k] || 0);
         const a = acc[p.code][k];
         a.sum += n; a.dist[n]++; if (n > 0) a.any++;
+        if (k === 'COAL') continue;
         tot[k.startsWith('L:') ? 'OTROS' : k] += n; total += n;
       }
       if (r < EXTRA_RUNS) for (const k of EXTRA_PARTIES) {
@@ -402,6 +410,8 @@ function simulate({ pollKey = 'cis', poll, podemosShare = 0.39, runs = 4000, see
     for (const k of PARTIES) natSeats[k] += tot[k];
     const left = BLOQUES.izquierda.reduce((a, k) => a + tot[k], 0);
     const right = BLOQUES.derecha.reduce((a, k) => a + tot[k], 0);
+    coalSeats += coalRun;
+    if (left - tot.SUMAR - tot.PODEMOS + coalRun >= 176) leftCoalWins++;
     if (left >= 176) leftWins++;
     if (right >= 176) rightWins++;
   }
@@ -417,11 +427,12 @@ function simulate({ pollKey = 'cis', poll, podemosShare = 0.39, runs = 4000, see
   const national = {
     exp: Object.fromEntries(PARTIES.map(k => [k, natSeats[k] / runs])),
     pLeft: leftWins / runs, pRight: rightWins / runs,
+    coal: { exp: coalSeats / runs }, pLeftCoal: leftCoalWins / runs,
   };
   return { provinces, national, runs, ...(test ? { runTotals } : {}) };
 }
 </script>
-<script>const NAMES = { PP: 'PP', PSOE: 'PSOE', VOX: 'Vox', SUMAR: 'Sumar', PODEMOS: 'Podemos', ERC: 'ERC', JUNTS: 'Junts', BILDU: 'EH Bildu', PNV: 'PNV', BNG: 'BNG', CCA: 'CC', UPN: 'UPN', SALF: 'SALF', OTROS: 'Otros' };
+<script>const NAMES = { PP: 'PP', PSOE: 'PSOE', VOX: 'Vox', SUMAR: 'Sumar', PODEMOS: 'Podemos', ERC: 'ERC', JUNTS: 'Junts', BILDU: 'EH Bildu', PNV: 'PNV', BNG: 'BNG', CCA: 'CC', UPN: 'UPN', SALF: 'SALF', OTROS: 'Otros', COAL: 'Sumar + Podemos juntos' };
 const ABBR = { 1: 'VI', 2: 'AB', 3: 'A', 4: 'AL', 5: 'AV', 6: 'BA', 7: 'IB', 8: 'B', 9: 'BU', 10: 'CC', 11: 'CA', 12: 'CS', 13: 'CR', 14: 'CO', 15: 'C', 16: 'CU', 17: 'GI', 18: 'GR', 19: 'GU', 20: 'SS', 21: 'H', 22: 'HU', 23: 'J', 24: 'LE', 25: 'L', 26: 'LO', 27: 'LU', 28: 'M', 29: 'MA', 30: 'MU', 31: 'NA', 32: 'OR', 33: 'O', 34: 'P', 35: 'GC', 36: 'PO', 37: 'SA', 38: 'TF', 39: 'S', 40: 'SG', 41: 'SE', 42: 'SO', 43: 'T', 44: 'TE', 45: 'TO', 46: 'V', 47: 'VA', 48: 'BI', 49: 'ZA', 50: 'Z', 51: 'CE', 52: 'ML' };
 const POS = { 15: [0, 0], 27: [1, 0], 33: [2, 0], 39: [4, 0], 48: [5, 0], 20: [6, 0],
   36: [0, 1], 32: [1, 1], 24: [2, 1], 34: [3, 1], 9: [4, 1], 1: [5, 1], 31: [6, 1], 22: [7, 1], 25: [8, 1], 17: [9, 1],
@@ -482,6 +493,9 @@ function renderNational() {
   const order = ['PSOE', 'PP', 'VOX', 'SUMAR', 'PODEMOS', 'ERC', 'JUNTS', 'BILDU', 'PNV', 'BNG', 'CCA', 'UPN', 'SALF'];
   const line = el('p', 'seatline', 'Escaños esperados: ' + order.filter(k => n.exp[k] >= 0.5).map(k => NAMES[k] + ' ' + Math.round(n.exp[k])).join(' · '));
   box.append(line);
+  const sep = n.exp.SUMAR + n.exp.PODEMOS, jun = n.coal.exp;
+  const dif = Math.round(jun) - Math.round(sep);
+  box.append(el('p', 'seatline', 'Sumar + Podemos: ' + Math.round(sep) + ' escaños por separado, ' + Math.round(jun) + ' si van juntos' + (dif > 0 ? ' (+' + dif + ')' : '') + '. Mayoría de 176 de la izquierda: ' + pct(n.pLeft) + ' por separado, ' + pct(n.pLeftCoal) + ' juntos.'));
 }
 
 function renderCard() {
@@ -493,12 +507,15 @@ function renderCard() {
   const head = el('div'); head.append(el('p', 'meta', p.ccaa + ' · ' + p.seats + (p.seats === 1 ? ' diputado' : ' diputados')), el('h2', '', p.name));
   const ver = el('div', 'verdict'); ver.append(el('span', 'tag', v === 'llega' ? 'Tu voto llega.' : v === 'alambre' ? 'Está en el alambre.' : 'Se queda en el cajón.'), el('span', 'pill', VERDICT_TXT[v]));
   const why = el('p', 'note'); why.append(document.createTextNode(pn + ' saca al menos un escaño en '), Object.assign(el('b'), { textContent: pct(m.pAny) }), document.createTextNode(' de las simulaciones. Escaños esperados: ' + m.exp.toFixed(1).replace('.', ',') + '.'));
+  const sm = metric(p.code, 'SUMAR'), pd = metric(p.code, 'PODEMOS'), cm = metric(p.code, 'COAL'), cmp = el('p', 'note');
+  const f1 = x => x.toFixed(1).replace('.', ',');
+  if (party === 'COAL') cmp.textContent = 'Por separado: Sumar ' + f1(sm.exp) + ' escaños (' + pct(sm.pAny) + ' de llegar) y Podemos ' + f1(pd.exp) + ' (' + pct(pd.pAny) + '). Juntos: ' + f1(cm.exp) + ' (' + pct(cm.pAny) + '). Diferencia: ' + (cm.exp - sm.exp - pd.exp >= 0 ? '+' : '') + f1(cm.exp - sm.exp - pd.exp) + ' escaños.';
   const ps = metric(p.code, 'PSOE'), pm = el('p', 'note');
   if (ps.pExtra >= 0.2) pm.append(document.createTextNode('Aquí el voto útil pesa: un punto más para el PSOE le da un escaño extra en el '), Object.assign(el('b'), { textContent: pct(ps.pExtra) }), document.createTextNode(' de los casos.'));
   else if (ps.pExtra >= 0.05) pm.append(document.createTextNode('Un punto más para el PSOE le da un escaño extra en el '), Object.assign(el('b'), { textContent: pct(ps.pExtra) }), document.createTextNode(' de los casos: el voto cuenta, pero no decide.'));
   else pm.append(document.createTextNode('Un punto más para el PSOE casi nunca cambia su reparto aquí (' + pct(ps.pExtra) + '): su escaño marginal está muy lejos o ya es suyo.'));
   const lg = el('div', 'legendrow'); ['Partido', 'Probabilidad de escaño', 'P(≥1)', 'Esc.'].forEach(t => lg.append(el('span', '', t)));
-  const rows = Object.keys(current.provinces[p.code]).filter(k => k !== 'OTROS' && (current.provinces[p.code][k].exp > 0.02 || current.provinces[p.code][k].pAny > 0.02)).sort((a, b) => current.provinces[p.code][b].exp - current.provinces[p.code][a].exp || current.provinces[p.code][b].pAny - current.provinces[p.code][a].pAny);
+  const rows = Object.keys(current.provinces[p.code]).filter(k => k !== 'OTROS' && (k !== 'COAL' || party === 'COAL') && (current.provinces[p.code][k].exp > 0.02 || current.provinces[p.code][k].pAny > 0.02)).sort((a, b) => current.provinces[p.code][b].exp - current.provinces[p.code][a].exp || current.provinces[p.code][b].pAny - current.provinces[p.code][a].pAny);
   const ul = el('ul', 'bars');
   for (const k of rows) {
     const r = current.provinces[p.code][k], li = el('li', k === party ? 'me' : k === 'PSOE' ? 'ps' : '');
@@ -512,7 +529,7 @@ function renderCard() {
   const d1 = el('p', 'note', '23-J de 2023, escaños: ' + real + '.'), d2 = el('p', 'note', 'Reparto de probabilidad de ' + pn + ': ' + dist + '.');
   const d3 = el('p', 'note'); if (m.pExtra != null) d3.textContent = 'Un punto más de voto para ' + pn + ' le da un escaño extra en el ' + pct(m.pExtra) + ' de los casos.';
   det.append(d1, d2, d3);
-  box.append(head, ver, why, pm, lg, ul, det);
+  box.append(head, ver, why, ...(party === 'COAL' ? [cmp] : []), pm, lg, ul, det);
 }
 
 function renderMap() {
